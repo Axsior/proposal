@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Little Surprise 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="progress" id="progress" aria-label="Progress"></div>
+  <button id="muteBtn" class="icon-btn" aria-label="Musik"><i class="fa-solid fa-volume-xmark"></i></button>
+</header>
+
+<main>
+  <!-- 0: Landing -->
+  <section class="stage active" data-step="0">
+    <div class="bear bounce">🧸<span class="flower">🌷</span></div>
+    <h1>Hiii, I have something special for you! 💗</h1>
+    <p class="sub">But first, can you give me a little bit of your time?</p>
+    <button class="btn primary" data-next><i class="fa-solid fa-envelope-open-text"></i> Open My Surprise 💌</button>
+  </section>
+
+  <!-- 1: Ready? -->
+  <section class="stage" data-step="1">
+    <div class="bear bounce small">🐰</div>
+    <h2>Are you ready for a little surprise?</h2>
+    <p class="sub" id="readyMsg">Take a deep breath… 🌸</p>
+    <div class="row">
+      <button class="btn primary" data-next>YES! 🎀</button>
+      <button class="btn ghost" id="notYet">Not Yet…</button>
+    </div>
+    <button class="btn primary hidden" id="readyContinue" data-next>Okay, okay, let's go 💗</button>
+  </section>
+
+  <!-- 2: Compliments -->
+  <section class="stage" data-step="2">
+    <h2>Little Compliments ✨</h2>
+    <p class="sub">Tap each card (<span id="flipCount">0</span>/5)</p>
+    <div class="cards" id="cards"></div>
+    <button class="btn primary hidden" id="cardsContinue" data-next>Continue 💗</button>
+  </section>
+
+  <!-- 3: Letter -->
+  <section class="stage" data-step="3">
+    <h2>A Little Confession 💌</h2>
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="letter"><p id="typed"></p></div>
+      <div class="env-front"></div>
+      <div class="flap"></div>
+      <div class="seal">💗</div>
+    </div>
+    <p class="sub" id="envHint">Tap the envelope to open it</p>
+    <button class="btn primary hidden" id="letterContinue" data-next>Continue 💗</button>
+  </section>
+
+  <!-- 4: Question -->
+  <section class="stage" data-step="4">
+    <div class="bear bounce">🧸<span class="flower">💐</span></div>
+    <h1 class="big">Will You Be My Girlfriend? 💍</h1>
+    <p class="sub">So… would you like to make this little story ours?</p>
+    <p class="cute" id="noMsg" aria-live="polite">&nbsp;</p>
+    <div class="row answer-row">
+      <button class="btn primary yes" id="yesBtn">YES! 💖</button>
+      <button class="btn ghost" id="noBtn">NO 😭</button>
+    </div>
+  </section>
+
+  <!-- 5: YES -->
+  <section class="stage" data-step="5">
+    <div class="bear bounce">🧸💞🐰</div>
+    <h1 class="big">YAAAAY! I LOVE YOU! 💗</h1>
+    <p class="sub">You just made me the happiest person ever!</p>
+    <button class="btn ghost replay"><i class="fa-solid fa-rotate-right"></i> Replay</button>
+  </section>
+
+  <!-- 6: NO (respectful ending) -->
+  <section class="stage" data-step="6">
+    <div class="bear small">🧸</div>
+    <h2>That's okay 🤍</h2>
+    <p class="sub">Thank you for being honest with me. Your friendship means a lot, and I respect your answer.</p>
+    <button class="btn ghost replay"><i class="fa-solid fa-rotate-right"></i> Replay</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
